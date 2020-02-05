@@ -33,7 +33,7 @@ app.get("/api/moviedex", jsonParser, (req, res) => {
 
 app.post("/api/moviedex", jsonParser, (req, res) => {
   let { film_title, year, rating } = req.body;
-
+  console.log(req.body);
   if (film_title == undefined || year == undefined || rating == undefined) {
     res.statusMessage = "Faltan parametros";
     return res.status(406).send();

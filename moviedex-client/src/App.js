@@ -66,10 +66,12 @@ class App extends React.Component {
     };
     console.log(newMovie);
 
-    /*     let settings = {
+    let settings = {
       method: "POST",
-      ContentType: "application/json",
-      body: JSON.stringify(newMovie)
+      body: JSON.stringify(newMovie),
+      headers: {
+        "Content-Type": "application/json"
+      }
     };
 
     fetch(url, settings)
@@ -84,7 +86,7 @@ class App extends React.Component {
       })
       .catch(err => {
         console.log(err);
-      }); */
+      });
   };
 
   render() {
